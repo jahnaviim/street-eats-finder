@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Street Eats Finder</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Discover the Best Street Food Spots 🍴</h1>
+        <form method="POST">
+            <input type="text" name="location" placeholder="Enter a city (e.g., New York)" required>
+            <button type="submit">Find Spots</button>
+        </form>
+
+        {% if food_spots %}
+            <h2>Top Street Food Spots in {{ request.form.get('location') }}</h2>
+            <ul>
+                {% for spot in food_spots %}
+                    <li>
+                        <strong>{{ spot.name }}</strong><br>
+                        Address: {{ spot.location.display_address | join(', ') }}<br>
+                        Rating: {{ spot.rating }} ⭐
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
