@@ -34,8 +34,8 @@ Street Eats Finder is a Flask-based web application that allows users to search 
 
 5. Access the app at `http://127.0.0.1:5000`.
 
-## Deployment on Render
-[Follow these instructions to deploy for free.](https://render.com/docs/deploy-flask)
+## Future Deployment (Optional)
+If you decide to deploy the project later, you can follow free deployment guides using Render or Railway.
 
 ## License
 This project is licensed under the MIT License.
